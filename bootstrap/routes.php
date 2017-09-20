@@ -29,7 +29,7 @@ class routes extends klein{
     $controller = "app\\controllers\\".$explode[0]."Controller";
     $action = $explode[1];
 
-    $this->respond("GET", $route , function($request, $response, $app) use ($controller, $action){
+    $this->respond(["GET","POST"], $route , function($request, $response, $app) use ($controller, $action){
 
     $class = new $controller();
     $this-> __loadVars($request, $response, $app);
@@ -38,7 +38,7 @@ class routes extends klein{
   });
 
     }else{
-      $this-> respond("GET", $route, $call);
+      $this-> respond(["GET","POST"], $route, $call);
     }
   }
 
