@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Página inicial{% endblock %}
+
+{% block body %}
+
+    <h1>Inicial</h1>
+    <ol>
+      {% for produto in produtos %}
+        <li>{{ produto.name }} - Valor: {{ produto.price }}</li>
+      {% endfor %}
+    </ol>
+
+{% endblock %}

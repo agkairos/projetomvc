@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": ">=5.6",
+        "twig/twig": "^2.0",
+        "klein/klein": "^2.1"
+    },
+
+  "autoload" : {"psr-4" : {
+      "app\\":"app/",
+      "":""
+    }
+  }
+}
